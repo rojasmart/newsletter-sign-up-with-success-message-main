@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from "./assets/images/illustration-sign-up-desktop.svg";
 import Icon from "./assets/images/icon-list.svg";
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(null);
+
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  const handleChange = (event) => {
+    if (!isValidEmail(event.target.value)) {
+      setError("Email is invalid");
+    } else {
+      setError(null);
+    }
+
+    setEmail(event.target.value);
+  };
+
   return (
     <div className="container">
       <div className="card">
@@ -29,7 +46,15 @@ function App() {
           </div>
           <div className="content-input">
             <label htmlFor="content-text-input">Email address</label>
-            <input type="text" placeholder="email@company.com" />
+            <input
+              type="text"
+              placeholder="email@company.com"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              className={error ? "error-input" : "error"}
+            />
             <button className="content-button">
               Subscribe to monthly newsletter
             </button>

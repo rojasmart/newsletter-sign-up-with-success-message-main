@@ -70,6 +70,11 @@ input {
   border: 1px solid var(--grey);
 }
 
+.error-input {
+  border: 1px solid var(--tomato);
+  background-color: var(--tomato);
+}
+
 label {
   font-size: 0.75rem;
   font-weight: 700;
