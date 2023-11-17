@@ -53,6 +53,13 @@ button {
   border: none;
   font-weight: var(--bold);
   margin-top: 1.6rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  background: var(--tomato, linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%));
+  box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
 }
 
 input {
