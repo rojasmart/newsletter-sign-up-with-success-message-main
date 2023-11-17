@@ -32,6 +32,12 @@ body {
   background-color: var(--neutral);
 }
 
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -46,6 +52,21 @@ button {
   color: white;
   border: none;
   font-weight: var(--bold);
+  margin-top: 1.6rem;
+}
+
+input {
+  width: 376px;
+  width: 376px;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+}
+
+label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .container {
@@ -58,6 +79,38 @@ button {
 .card {
   background-color: var(--white);
   border-radius: 36px;
+  width: 928px;
+  height: 641px;
   padding: 1rem;
   display: flex;
+  justify-content: space-between;
+}
+
+.content-list {
+  margin: 2rem 0;
+}
+
+.content-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.content-list ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content {
+  padding: 5rem 3rem;
+}
+
+.content-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  height: 100%;
 }
