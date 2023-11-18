@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className={validate ? "container-success" : "container"}>
       <div className={validate ? "card-success" : "card"}>
         {validate ? (
           <div className="content-success">
