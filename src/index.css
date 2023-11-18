@@ -28,7 +28,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
-
   background-color: var(--neutral);
 }
 
@@ -152,9 +151,13 @@ form {
   height: 520px;
   background-color: var(--white);
   border-radius: 36px;
-  padding: 1rem;
+  padding: 2.5rem 4rem;
 }
 
 .image {
   height: 100%;
+}
+
+span {
+  font-weight: var(--bold);
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Img from "./assets/images/illustration-sign-up-desktop.svg";
 import Icon from "./assets/images/icon-list.svg";
+import IconSuccess from "./assets/images/icon-success.svg";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -39,7 +40,20 @@ function App() {
     <div className="container">
       <div className={validate ? "card-success" : "card"}>
         {validate ? (
-          <div className="content-success"></div>
+          <div className="content-success">
+            <img src={IconSuccess} alt="icon-success" />
+            <h1>Thanks for subscribing!</h1>
+            <p>
+              A confirmation email has been sent to <span>{email}</span>. Please
+              open it and click the button inside to confirm your subscription.
+            </p>
+            <button
+              className="content-button-success"
+              onClick={() => setValidate(false)}
+            >
+              Dismiss message
+            </button>
+          </div>
         ) : (
           <>
             <div className="content">
