@@ -147,6 +147,14 @@ form {
   justify-content: space-between;
 }
 
+.content-success {
+  width: 504px;
+  height: 520px;
+  background-color: var(--white);
+  border-radius: 36px;
+  padding: 1rem;
+}
+
 .image {
   height: 100%;
 }
