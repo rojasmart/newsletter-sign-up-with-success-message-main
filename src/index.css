@@ -37,11 +37,6 @@ body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 h1 {
   font-size: 3.5rem;
 }
@@ -87,7 +82,7 @@ input[type="text"].error-input:focus {
 
 label {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: var(--bold);
   margin-bottom: 0.5rem;
 }
 
@@ -125,10 +120,6 @@ label {
   gap: 0.5rem;
 }
 
-form {
-  width: 376px;
-}
-
 .content {
   padding: 3rem 3rem;
 }
@@ -136,6 +127,10 @@ form {
 .content-input {
   display: flex;
   flex-direction: column;
+}
+
+form {
+  width: 376px;
 }
 
 .email-error {
@@ -184,21 +179,24 @@ span {
     padding: 1rem;
   }
 
-  .container.success {
+  .container-success {
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .icon-success {
-    width: 15%;
+  .content-success img {
+    max-width: 15%;
   }
 
   .content-success {
     width: 100vw;
     height: 100vh;
     border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .card {
