@@ -20,6 +20,17 @@ function App() {
     setEmail(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setError(null);
+
+    if (isValidEmail(email)) {
+      console.log("the email is valid");
+    } else {
+      setError("Email is invalid");
+    }
+  };
+
   return (
     <div className="container">
       <div className="card">
@@ -45,19 +56,22 @@ function App() {
             </ul>
           </div>
           <div className="content-input">
-            <label htmlFor="content-text-input">Email address</label>
-            <input
-              type="text"
-              placeholder="email@company.com"
-              id="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-              className={error ? "error-input" : "error"}
-            />
-            <button className="content-button">
-              Subscribe to monthly newsletter
-            </button>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="content-text-input">Email address</label>
+              {error && <h2 style={{ color: "red" }}>{error}</h2>}
+              <input
+                type="text"
+                placeholder="email@company.com"
+                id="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                className={error ? "error-input" : "error"}
+              />
+              <button className="content-button" type="submit">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
           </div>
         </div>
         <div className="image">

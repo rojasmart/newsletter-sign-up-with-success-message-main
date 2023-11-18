@@ -70,9 +70,10 @@ input {
   border: 1px solid var(--grey);
 }
 
-.error-input {
-  border: 1px solid var(--tomato);
-  background-color: var(--tomato);
+input.error-input,
+input.error-input:focus {
+  border: 1px solid #ff6155;
+  background-color: rgba(255, 97, 85, 0.15);
 }
 
 label {
