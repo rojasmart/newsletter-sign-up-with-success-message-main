@@ -43,6 +43,10 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
 button {
   width: 376px;
   height: 56px;
@@ -121,13 +125,21 @@ label {
   gap: 0.5rem;
 }
 
+form {
+  width: 376px;
+}
+
 .content {
-  padding: 5rem 3rem;
+  padding: 3rem 3rem;
 }
 
 .content-input {
   display: flex;
   flex-direction: column;
+}
+
+.email-error {
+  color: var(--tomato);
 }
 
 .content-labels {

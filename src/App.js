@@ -5,13 +5,14 @@ import Icon from "./assets/images/icon-list.svg";
 function App() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
+  const [submit, setSubmit] = useState(false);
 
   function isValidEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
   }
 
   const handleChange = (event) => {
-    if (!isValidEmail(event.target.value)) {
+    if (!isValidEmail(event.target.value) && submit === true) {
       setError("Email is invalid");
     } else {
       setError(null);
@@ -27,8 +28,9 @@ function App() {
     if (isValidEmail(email)) {
       console.log("the email is valid");
     } else {
-      setError("Email is invalid");
+      setError("Valid email required");
     }
+    setSubmit(true);
   };
 
   return (
@@ -59,7 +61,11 @@ function App() {
             <form onSubmit={handleSubmit}>
               <div className="content-labels">
                 <label htmlFor="content-text-input">Email address</label>
-                {error && <p style={{ color: "red" }}>{error}</p>}
+                {error && (
+                  <label htmlFor="content-text-error" className="email-error">
+                    {error}
+                  </label>
+                )}
               </div>
               <input
                 type="text"
