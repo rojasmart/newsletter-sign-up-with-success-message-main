@@ -57,8 +57,10 @@ function App() {
           </div>
           <div className="content-input">
             <form onSubmit={handleSubmit}>
-              <label htmlFor="content-text-input">Email address</label>
-              {error && <h2 style={{ color: "red" }}>{error}</h2>}
+              <div className="content-labels">
+                <label htmlFor="content-text-input">Email address</label>
+                {error && <p style={{ color: "red" }}>{error}</p>}
+              </div>
               <input
                 type="text"
                 placeholder="email@company.com"
