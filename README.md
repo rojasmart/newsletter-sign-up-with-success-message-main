@@ -1,5 +1,8 @@
 # Newsletter sign-up form with success message
 
+![image](https://github.com/user-attachments/assets/ae03a303-7b3e-447f-b2c4-bc3695e38282)
+
+
 Users should be able to:
 
 - Add their email and submit the form
